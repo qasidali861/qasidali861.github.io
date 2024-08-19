@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSK Desserts Bar | Coming Soon</title>
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+        }
+        .image-container {
+            width: 100%;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+        }
+        /* body, html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -16,13 +36,13 @@
             background-color: #282c34;
             color: #fff;
             text-align: center;
-        }
-        .container {
+        }*/
+        /* .container {
             max-width: 600px;
             padding: 20px;
             border: 1px solid #fff;
             border-radius: 10px;
-        }
+        } */
         h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
@@ -33,11 +53,15 @@
         .countdown {
             font-size: 1.5em;
             margin-top: 1em;
-        }
+        } 
     </style>
 </head>
 <body>
+    
     <div class="container">
+        <div class="image-container">
+            <img src="img.jpeg" alt="Top Image">
+        </div>
         <h1>MSK Desserts Bar Narowal is Coming Soon!!!</h1>
         <p>We are working hard to give you the best experience. Stay tuned!</p>
         <div class="countdown" id="countdown">
