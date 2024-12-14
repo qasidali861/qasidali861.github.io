@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSK Desserts Bar | Coming Soon</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+        }
+        .image-container {
+            width: 100%;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+        }
+        /* body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+        }*/
+        /* .container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+        } */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .countdown {
+            font-size: 1.5em;
+            margin-top: 1em;
+        } 
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- <a href="website/index.html" class="button">Go to New Website</a> -->
+        <div class="image-container">
+            <img src="img.jpeg" alt="Top Image">
+        </div>
+        <h1>MSK Desserts Bar Narowal is Coming Soon!!!</h1>
+        <p>We are working hard to give you the best experience. Stay tuned!</p>
+        <div class="countdown" id="countdown">
+            Launching in: <span id="time">00d 00h 00m 00s</span>
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 01, 2024 23:59:59").getTime();
+
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("time").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("time").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
